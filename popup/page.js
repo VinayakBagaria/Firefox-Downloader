@@ -3,7 +3,9 @@ function updateTab(tabs)
 	var myHeaders = new Headers();
 
 	var myInit = { method: 'GET',
-	               headers: myHeaders };
+	               headers: myHeaders,
+	               mode: 'cors',
+	               cache: 'default' };
 
 	var URL="https://www.saveitoffline.com/process/?url="+tabs[0].url+"&type=json";
 
@@ -13,29 +15,31 @@ function updateTab(tabs)
 	  return response.json();
 	}).then(function(data) {
 		document.getElementById("title").innerHTML=data['title'];
-		let imgLink=data['thumbnail'];
-
-		if(imgLink.indexOf("https")==-1)
-			document.getElementById("icon").src="https:"+imgLink;
-		else
-			document.getElementById("icon").src=imgLink;
-
+		//document.getElementById("icon").src=data['thumbnail'];
 		var links=document.getElementById("links");
 		let x=0;
+		console.log(data['urls']);
 		while(1>0)
 		{
 			let val=data['urls'][x]
 			let label=val['label'];
-			console.log(val['id']);
+			console.log(label);
 			let consider=label.indexOf("video");
+			console.log(consider);
 			
 			if(consider!=-1)
 				break;
 			else
 			{
 				let a=document.createElement('a');
-				a.setAttribute("href",val['id']);
-				a.innerHTML=val['label'];
+				let linkText=document.createTextNode(label);
+				a.appendChild(linkText);
+				a.title=linkText;
+				//Only 360p video
+				if(label == "360p - mp4")
+				document.getElementById("vid").src=val['id'];	
+									
+				a.href=val['id'];
 				links.appendChild(a);
 				x+=1	
 			}
@@ -46,9 +50,6 @@ function updateTab(tabs)
 }
 
 
-document.getElementsByTagName("a").onclick = function(e){
-	alert(e.href+" - "+this.href);
-}
 
 var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
 gettingActiveTab.then(updateTab);
