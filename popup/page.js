@@ -47,6 +47,7 @@ function updateTab(tabs)
 			a.appendChild(linkText);
 			a.title=linkText;
 			a.href=val['id'];
+			a.id="video"
 			links.appendChild(a);
 
 			//Only 360p video in the link

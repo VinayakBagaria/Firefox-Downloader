@@ -1,10 +1,13 @@
 html, body {
   width: 600px;
   background-color: #29a270;
+  font-family: 'Montserrat';
 }
 
-a{
+#video{
 	margin: 0% auto;
+	margin-top: 3px;
+	margin-bottom: 3px;
 	padding-right: 3px;
 	padding-left: 3px;
   	text-align: left;
@@ -37,4 +40,18 @@ a{
 	width: 140px;
 	height: 100px;
 	box-shadow: 1px 1px 5px #5c5c5c;
+}
+
+
+#developed{
+	color:white;
+	text-align: center;
+	padding-top: 10px;
+	font-size: 15px;
+}
+
+#names{
+	font-weight: bolder;
+	font-size: 25px;
+	color:white;
 }
