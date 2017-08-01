@@ -15,6 +15,9 @@ a{
 	border-bottom: 0;
 	border-left: 0;
 	border-right: 0;
+	text-decoration: none;
+
+	transition: all 0.2s ease-out;
 }
 
 #title{
