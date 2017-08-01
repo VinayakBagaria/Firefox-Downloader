@@ -15,7 +15,7 @@ function updateTab(tabs)
 	  return response.json();
 	}).then(function(data) {
 		// if website doesnt contain a valid video file
-		if(data['error']=="no_media_found")
+		if(data['error'])
 		{
 			document.getElementById("title").innerHTML="No video link found";	
 			return;
