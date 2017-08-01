@@ -11,9 +11,7 @@
   },
 
   "permissions": [
-    "tabs",
-    "webRequest",
-    "host"
+    "tabs"
   ],
 
   "browser_action": {
