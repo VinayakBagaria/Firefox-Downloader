@@ -6,16 +6,12 @@
 
   "description": "Download youtube videos at a click",
   "homepage_url": "https://github.com/VinayakBagaria",
-  "icons": {
-    "48": "icon.jpg"
-  },
 
   "permissions": [
     "tabs"
   ],
 
   "browser_action": {
-    "default_icon": "icon.jpg",
     "default_title": "Downloader",
     "default_popup": "popup/page.html"
   }
