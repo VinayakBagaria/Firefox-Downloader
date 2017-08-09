@@ -15,7 +15,7 @@ permission. We guarentee that this add-on won't look into your browsing history 
 
 ### Fixes and Bugs
 
-If there is any problem or you don't like our design or want to appreciate us or suggest an edit, make a pull request or contact us.
+If there is any problem or you don't like our design or want to appreciate us or suggest an edit, make a pull request or contact us.<br />
 [Vinayak Bagaria](https://www.github.com/VinayakBagaria)<br/>
 [Gulzar Ahmed](https://www.github.com/gulzar1996)
 
