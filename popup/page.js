@@ -10,18 +10,18 @@ function updateTab(tabs)
 	let URL='https://www.saveitoffline.com/process/?url='+tabs[0].url+'&type=json';
 
 	let myRequest = new Request(URL, myInit);
-	
+
 	fetch(myRequest).then(function(response) {
 	  return response.json();
 	}).then(function(data) {
 		// get title parent h4 and make the title
 		let h4=document.createElement('h4');
 		h4.id='title';
-		
+
 		// if website doesnt contain a valid video file
 		if(data['error'])
 		{
-			h4.textContent='No video link found';	
+			h4.textContent='No video link found';
 			document.getElementById('information').appendChild(h4);
 			return;
 		}
@@ -37,17 +37,17 @@ function updateTab(tabs)
 		for(x=0;x<urls.length;x++)
 		{
 			let val=urls[x]
-			
+
 			// get label value, identifying type of video
 			let label=val['label'];
 
 			// if video word occurs in the label, then dont display further links
 			let consider=label.indexOf('video');
-			
+
 			if(consider!=-1)
 				return;
-			
-			// create the a tag			
+
+			// create the a tag
 			let a=document.createElement('a');
 			let linkText=document.createTextNode(label);
 			a.appendChild(linkText);

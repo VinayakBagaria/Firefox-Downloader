@@ -11,8 +11,13 @@
     "tabs"
   ],
 
+  "icons": {
+    "48": "icon.ico"
+  },
+
   "browser_action": {
     "default_title": "Downloader",
-    "default_popup": "popup/page.html"
+    "default_popup": "popup/page.html",
+    "default_icon": "icon.ico"
   }
 }
