@@ -8,11 +8,6 @@ Open [DownloaderCUFE](https://addons.mozilla.org/en-US/firefox/addon/downloader-
 permission. We guarentee that this add-on won't look into your browsing history (check the code for yourself).
 
 
-### Example
-
-<img src="https://github.com/VinayakBagaria/Firefox-Downloader/blob/master/screenshot.png"  width="700" height="400" />
-
-
 ### Fixes and Bugs
 
 If there is any problem or you don't like our design or want to appreciate us or suggest an edit, make a pull request or contact us.<br />
