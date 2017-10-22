@@ -59,7 +59,9 @@ function updateTab(tabs)
 			//Only 360p video in the link
 			if(label == '360p - mp4')
 			{
-				document.getElementById('vid').src = val['id'];
+				console.log('hello');
+				localStorage.setItem('video', val['id']);
+				browser.tabs.create({url: 'video.html'});
 			}
 		}
 	});
