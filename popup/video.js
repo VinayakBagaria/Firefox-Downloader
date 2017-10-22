@@ -1,26 +1,36 @@
-let src = localStorage.getItem('video');
+let url = localStorage.getItem('video');
 
 let videotag = document.getElementById('videotags');
 
-var height = videotag.offsetHeight;
-var width = videotag.offsetWidth;
+let height = videotag.offsetHeight;
+let width = videotag.offsetWidth;
 
-console.log(height);
-console.log(width);
-
-videotag.src = src;
-
+videotag.src = url;
 videotag.play();
 
 
-setInterval(function(){
-  console.log(videotag.offsetHeight)
-  console.log(videotag.offsetWidth)
-  console.log(videotag.offsetWidth == width)
-  console.log(videotag.offsetHeight == height)
-  if (videotag.offsetWidth == width && videotag.offsetHeight == height)
-  {
-    console.log('closed')
-    window.close();
+var timer = setInterval(function(){
+  var x = browser.tabs.getCurrent();
+
+  function onGot(tabInfo) {
+    if(tabInfo['status'] == 'complete')
+    {
+      console.log(videotag.offsetHeight);
+      if(videotag.offsetHeight == height && videotag.offsetWidth == width){
+        var closing = browser.tabs.remove(tabInfo['id']);
+        closing.then(function(){
+          console.log('closed')
+        }, function(){
+          console.log('error closing');
+        });
+      }
+      clearInterval(timer);
+    }
   }
-}, 5000)
+
+  function onError(error) {
+    console.log(`Error: ${error}`);
+  }
+
+  x.then(onGot, onError);
+}, 2000);
