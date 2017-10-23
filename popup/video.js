@@ -15,7 +15,6 @@ var timer = setInterval(function(){
   function onGot(tabInfo) {
     if(tabInfo['status'] == 'complete')
     {
-      console.log(videotag.offsetHeight);
       if(videotag.offsetHeight == height && videotag.offsetWidth == width){
         var closing = browser.tabs.remove(tabInfo['id']);
         closing.then(function(){
