@@ -1,0 +1,48 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+  display: flex;
+  flex-direction: column;
+}
+
+#links{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+#developed{
+	color: black;
+	text-align: center;
+	padding-top: 10px;
+	font-size: 15px;
+  margin-bottom: 10px;
+}
+
+#names{
+	font-weight: bolder;
+	font-size: 25px;
+	color: red;
+}
+
+#videotags{
+  margin: 0 auto;
+  display: block;
+}
+
+a#video{
+  text-align: center;
+  margin-top: 10px;
+  padding: 4px;
+}
+
+a#video:hover{
+  background: #98FB98;
+}
+
+
+#title{
+	text-align: center;
+	color: black;
+}
