@@ -28,12 +28,11 @@ function updateTab(tabs)
 		// get title of video
 		h4.textContent = data['title'];
 		document.getElementById('information').appendChild(h4);
-		// get all links of video
-		let links = document.getElementById('links');
-		// display links
-		let x = 0;
+		localStorage.setItem('title', data['title'])
+
 		// get all urls
 		let urls = data['urls'];
+
 		for(x = 0; x<urls.length; x++)
 		{
 			let val = urls[x]
@@ -47,19 +46,12 @@ function updateTab(tabs)
 			if(consider != -1)
 				return;
 
-			// create the a tag
-			let a = document.createElement('a');
-			let linkText = document.createTextNode(label);
-			a.appendChild(linkText);
-			a.title = linkText;
-			a.href = val['id'];
-			a.id = 'video'
-			links.appendChild(a);
-
 			//Only 360p video in the link
 			if(label == '360p - mp4')
 			{
-				document.getElementById('vid').src = val['id'];
+				localStorage.setItem('urls', JSON.stringify(urls));
+				localStorage.setItem('video', val['id']);
+				browser.tabs.create({url: 'video.html'});
 			}
 		}
 	});
