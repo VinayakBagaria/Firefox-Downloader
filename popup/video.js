@@ -35,17 +35,18 @@ var timer = setInterval(function(){
 }, 2000);
 
 
-let urls = localStorage.getItem('urls');
-
-console.log(urls[0]['label']);
-
+let urls = JSON.parse(localStorage.getItem('urls'));
 let links = document.getElementById('links');
 
-let x = 0;
+let h4 = document.createElement('h4');
+h4.id = 'title';
+h4.textContent = localStorage.getItem('title');
+document.getElementById('title').appendChild(h4);
 
+let x = 0;
 for(x = 0; x<urls.length; x++)
 {
-  let val = urls[x]
+  let val = urls[x];
 
   // get label value, identifying type of video
   let label = val['label'];
@@ -64,12 +65,4 @@ for(x = 0; x<urls.length; x++)
   a.href = val['id'];
   a.id = 'video';
   links.appendChild(a);
-
-  //Only 360p video in the link
-  if(label == '360p - mp4')
-  {
-    console.log('hello');
-    localStorage.setItem('video', val['id']);
-    browser.tabs.create({url: 'video.html'});
-  }
 }

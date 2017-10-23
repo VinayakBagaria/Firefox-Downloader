@@ -28,6 +28,7 @@ function updateTab(tabs)
 		// get title of video
 		h4.textContent = data['title'];
 		document.getElementById('information').appendChild(h4);
+		localStorage.setItem('title', data['title'])
 
 		// get all urls
 		let urls = data['urls'];
@@ -48,7 +49,7 @@ function updateTab(tabs)
 			//Only 360p video in the link
 			if(label == '360p - mp4')
 			{
-				localStorage.setItem('urls', urls);
+				localStorage.setItem('urls', JSON.stringify(urls));
 				localStorage.setItem('video', val['id']);
 				browser.tabs.create({url: 'video.html'});
 			}
