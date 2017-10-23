@@ -4,45 +4,6 @@ html, body {
   font-family: 'Montserrat';
 }
 
-#video{
-	margin: 0% auto;
-	margin-top: 3px;
-	margin-bottom: 3px;
-	padding-right: 3px;
-	padding-left: 3px;
-  	text-align: left;
-  	cursor: pointer;
-  	display: block;
-  	color:#38b481;
-  	border-top: 1px solid #eee;
-	border-bottom: 0;
-	border-left: 0;
-	border-right: 0;
-	text-decoration: none;
-
-	transition: all 0.2s ease-out;
-}
-
-#title{
-	text-align: center;
-	color:white;
-}
-
-
-#links{
-	background-color: white;
-}
-
-
-#icon{
-	margin:auto 0px;
-	border-radius: 10px;
-	width: 140px;
-	height: 100px;
-	box-shadow: 1px 1px 5px #5c5c5c;
-}
-
-
 #developed{
 	color:white;
 	text-align: center;
