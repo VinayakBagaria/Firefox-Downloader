@@ -4,7 +4,7 @@ html, body {
   font-family: 'Montserrat';
 }
 
-#developed{
+#developed, #information{
 	color:white;
 	text-align: center;
 	padding-top: 10px;
