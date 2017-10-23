@@ -4,6 +4,7 @@ html, body {
   font-family: 'Montserrat';
   display: flex;
   flex-direction: column;
+  background-color: hsl(0, 0%, 6.7%);
 }
 
 #links{
@@ -13,7 +14,7 @@ html, body {
 }
 
 #developed{
-	color: black;
+	color: white;
 	text-align: center;
 	padding-top: 10px;
 	font-size: 15px;
@@ -39,10 +40,11 @@ a#video{
 
 a#video:hover{
   background: #98FB98;
+  color: black;
 }
 
 
 #title{
 	text-align: center;
-	color: black;
+	color: white;
 }
