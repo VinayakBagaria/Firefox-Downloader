@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "Downloader",
-  "version": "1.0",
+  "version": "3.0",
 
   "description": "Download youtube videos at a click",
   "homepage_url": "https://github.com/VinayakBagaria",
