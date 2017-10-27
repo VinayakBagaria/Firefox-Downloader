@@ -1,6 +1,6 @@
 # Firefox Downloader and Streamer for Youtube
 
-For all the hostelites of FECU who can't access youtube videos after 10pm, an add-on for you.
+For all the hostelites of FECU who can't access Youtube videos after 10pm, an add-on for you.
 
 Stream videos from the pop-up and download on any format of your choice.
 
