@@ -14,4 +14,3 @@ If there is any problem or you don't like our design or want to appreciate us or
 [Vinayak Bagaria](https://www.github.com/VinayakBagaria)<br/>
 [Gulzar Ahmed](https://www.github.com/gulzar1996)
 
-<pre>Happy Youtubing !!!</pre>
